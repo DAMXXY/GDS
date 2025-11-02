@@ -20,6 +20,15 @@
     --bg-dark: #1a1a1a;
     --transition: 0.4s ease;
     --navbar: rgb(79, 6, 148);
+<<<<<<< HEAD
+  /* card and edge shadow variables to make dark/light theming consistent */
+  --card-bg: #1e1e1e;
+  --card-border: rgba(255,255,255,0.06);
+  --card-text: #fff;
+  --card-hover-bg: rgba(255,255,255,0.03);
+  --edge-shadow: rgba(0,0,0,0.45);
+=======
+>>>>>>> 4625537b4f1319d4b79cce7418d9ebbb66aa74a3
 }
 
 body.light-theme {
@@ -29,6 +38,15 @@ body.light-theme {
     --nav-bg: #ffffff;
     --sidebar-bg: #eeeeee;
     --navbar: rgb(20, 31, 180);
+<<<<<<< HEAD
+  /* light theme overrides for card / edge shadow */
+  --card-bg: #f9f9f9;
+  --card-border: #ddd;
+  --card-text: #111;
+  --card-hover-bg: #ffffff;
+  --edge-shadow: rgba(229,229,229,0.95);
+=======
+>>>>>>> 4625537b4f1319d4b79cce7418d9ebbb66aa74a3
 }
 
 body {
@@ -824,7 +842,11 @@ main{
 #categories h2{
   text-align: left;
   margin-bottom: 1rem;
+<<<<<<< HEAD
+  color: var(--text);
+=======
   color: rgb(0, 0, 0);
+>>>>>>> 4625537b4f1319d4b79cce7418d9ebbb66aa74a3
   width: 100%;
   padding: 15px 30px;
   top: 0;
@@ -900,11 +922,19 @@ main{
 }
 .category-row-wrap::before{
   left: 0;
+<<<<<<< HEAD
+  background: linear-gradient(90deg, var(--edge-shadow), rgba(0,0,0,0));
+}
+.category-row-wrap::after{
+  right: 0;
+  background: linear-gradient(270deg, var(--edge-shadow), rgba(0,0,0,0));
+=======
   background: linear-gradient(90deg, rgba(191, 191, 191, 0.403), rgba(229,229,229,0));
 }
 .category-row-wrap::after{
   right: 0;
   background: linear-gradient(270deg, rgba(191, 191, 191, 0.403), rgba(229, 229, 229, 0));
+>>>>>>> 4625537b4f1319d4b79cce7418d9ebbb66aa74a3
 }
 
 @media (max-width: 700px){
@@ -938,8 +968,13 @@ main{
 }
 
 .category-card{
+<<<<<<< HEAD
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+=======
   background: #e5e5e5;
   border: 1px solid #ddd;
+>>>>>>> 4625537b4f1319d4b79cce7418d9ebbb66aa74a3
   text-align: center;
   padding: 12px;
   overflow: hidden;
@@ -953,7 +988,11 @@ main{
   align-items: center;
   gap: 0.75rem;
   scroll-snap-align: start;
+<<<<<<< HEAD
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+=======
   transition: transform 0.18s ease, box-shadow 0.18s ease;
+>>>>>>> 4625537b4f1319d4b79cce7418d9ebbb66aa74a3
 }
 
 .category-card img{
@@ -975,6 +1014,45 @@ main{
 }
 
 .category-card:hover{
+<<<<<<< HEAD
+  background: var(--card-hover-bg);
+  cursor: pointer;
+}
+
+/* Image container inside card: ensure overflow hidden so scaled images don't escape */
+.category-slideshow{
+  overflow: hidden;
+  width: 100%;
+  height: var(--category-slideshow-h, 170px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Image sizing and transition. On card hover we'll scale the image. */
+.category-slideshow img,
+.category-card img{
+  max-width: 70%;
+  max-height: 70%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  transition: transform 0.28s ease, opacity 0.2s ease;
+  transform-origin: center center;
+}
+
+/* Hover the whole card to grow the image */
+.category-card:hover .category-slideshow img,
+.category-card:hover img{
+  transform: scale(1.08);
+}
+.category-card h3 {
+  font-size: 1rem;
+  margin: 0;
+  color: var(--card-text);
+=======
   background: white;
   cursor: pointer;
   
@@ -989,6 +1067,7 @@ main{
   font-size: 1rem;
   margin: 0;
   color: #111;
+>>>>>>> 4625537b4f1319d4b79cce7418d9ebbb66aa74a3
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   text-decoration: none;
   font-weight: 600;
